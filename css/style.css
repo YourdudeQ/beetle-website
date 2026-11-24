@@ -1,0 +1,386 @@
+/*-- CSS Reset --*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/*------ CSS CODE-------*/
+
+.top {
+   padding: 100px 0px 30px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+h1 {
+    color:#6082D0;
+    font-family: "Tomorrow",'monospace', sans-serif;
+    font-weight:600;
+    font-style: italic;
+    font-size:2.5em;
+    margin-bottom:20px;
+}
+
+h2 {
+   color:#6082D0;
+   font-family: "Tomorrow", 'monospace', sans-serif;
+   font-size: 2em;
+   margin-bottom: 10px;
+   padding: 100px 50px 30px;
+   text-align: center;
+}
+
+
+a.link {
+   font-family: "sans-serif";
+   color:#09b9c5;
+   font-size: 1em;
+   text-decoration: none;
+   white-space:nowrap;
+}
+
+a.link2 {
+   font-family:"sans-serif";
+   color: #003077;
+   font-size: 1em;
+   text-decoration:none;
+   white-space:nowrap;
+}
+
+a:hover.link2 {
+   color:rgb(30, 58, 7);
+   background-color:rgb(17, 149, 182);
+}
+
+.bg {
+   background-color: bisque;
+   height: 500px;
+}
+
+body {
+   background-color: #FFFEF7
+}
+
+
+button {
+   background-color:#b8cbf7;
+   font-size: 1em;
+   font-family: "Space Mono", monospace;
+   padding:10px 30px;
+   font-weight:600;
+   border: 3px solid #6082d0;
+   border-radius: 15px;
+   margin: 10px 0px 5px 0px;
+   color:#707070;
+   transition: all 0.5s ease;
+   display:flex;
+   align-items: center;
+}
+button:hover {
+   color:#fef8f8;
+   background-color: #6082d0;
+   border-color: #b8cbf7;
+   cursor: pointer;
+}
+
+
+p {
+    color: rgb(9, 78, 228);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    margin: 5px 0px 10px 4px;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+   padding: 1em 2em;
+}
+
+.lantern {
+   float: left;
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   flex-flow: row wrap;
+
+}
+
+.container div{
+   margin: 10px;
+   padding: 20px;
+}
+
+.signature{
+   display:flex;
+   justify-content: right;
+}
+
+.begin {
+   float:right;
+}
+
+/* --- NAVIGATION --- */
+
+.logo {
+   width: 40px;
+   height: 40px;
+   background-image: url('artboard-4.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+}
+
+nav {
+   background-color: #B8CBF7;
+   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2);
+   position: fixed;
+   width: 100%;
+   z-index: 3;
+}
+
+nav ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow: hidden;
+   background-color: #B8CBF7;
+}
+
+nav li a {
+   display: block;
+   padding: 20px 40px;
+   text-decoration: none;
+   color: #000;
+   font-weight: 600;
+}
+
+.active {
+   background-color: #6082D0;
+   color: #fff;
+}
+
+nav li a:hover,
+nav .menu-btn:hover {
+   background-color: #6f96f0;
+   color: #fff;
+}
+
+nav .logo {
+   display: block;
+   float: left;
+   font-size: 2em;
+   padding: 10px 40px 10px 40px;
+   text-decoration: none;
+}
+
+/* MENU */
+
+nav .menu {
+   clear: both;
+   max-height: 0;
+   transition: max-height .2s ease-out;
+   font-family:"Space Mono", monospace;
+}
+
+/* MENU ICON */
+
+nav .menu-icon {
+   cursor: pointer;
+   display: inline-block;
+   float: right;
+   padding: 28px 40px;
+   position: relative;
+   user-select: none;
+}
+
+nav .menu-icon .navicon {
+   background: #000;
+   display: block;
+   height: 4px;
+   position: relative;
+   transition: background .2s ease-out;
+   width: 24px;
+}
+
+nav .menu-icon .navicon:before,
+nav .menu-icon .navicon:after {
+   background: #000000;
+   content: '';
+   display: block;
+   height: 100%;
+   position: absolute;
+   transition: all .2s ease-out;
+   width: 100%;
+}
+
+nav .menu-icon .navicon:before {
+   top: 8px;
+}
+
+nav .menu-icon .navicon:after {
+   top: -8px;
+}
+
+/* MENU btn */
+
+nav .menu-btn {
+   display: none;
+}
+
+nav .menu-btn:checked~.menu {
+   max-height: 240px;
+}
+
+nav .menu-btn:checked~.menu-icon .navicon {
+   background: transparent;
+}
+
+nav .menu-btn:checked~.menu-icon .navicon:before {
+   transform: rotate(-45deg);
+}
+
+nav .menu-btn:checked~.menu-icon .navicon:after {
+   transform: rotate(45deg);
+}
+
+nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+   top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+   nav li {
+      float: left;
+   }
+
+   nav li a {
+      padding: 22px 40px;
+   }
+
+   nav .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+   }
+
+   nav .menu-icon {
+      display: none;
+   }
+}
+
+/* 
+footer {
+   background-color:#B8CBF7;
+   margin-top: 560px;
+   padding: 3px;
+   display: flex;
+  justify-content: space-between;
+}
+*/
+
+footer {
+   background-color: #B8CBF7;
+   padding: 5px;
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   box-sizing: border-box; /* Keeps padding from overflowing the screen width */
+}
+
+.social-icons, .email {
+   margin: 8px;
+}
+
+.workpage{
+   margin-bottom: 140px;
+}
+
+/* Form CSS */
+
+.contacts {
+   max-width: 980px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 20px 40px;
+}
+
+.form-mover {
+   display: flex;
+   margin-bottom: 20px; 
+}
+
+.form-mover textarea{
+   width: 250px;
+   height: 100px;
+   padding-top: 15px;
+}
+
+.one{
+   flex-grow: 3;
+
+}
+
+.two{
+   flex-grow: 1;
+}
+
+/* media query */
+
+@media (max-width: 600px) {
+   .form-mover {
+   flex-direction: column;
+   }
+   .form-mover div {
+      width: auto;
+   }
+}
